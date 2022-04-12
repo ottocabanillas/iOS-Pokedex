@@ -58,10 +58,10 @@
 		EC447D182805B04F0019ECE9 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
-				EC447D472805D3740019ECE9 /* Models */,
 				EC447D192805B04F0019ECE9 /* AppDelegate.swift */,
 				EC447D1D2805B04F0019ECE9 /* PokemonsController.swift */,
 				EC447D3B2805CE640019ECE9 /* PokemonController.swift */,
+				EC447D472805D3740019ECE9 /* Models */,
 				EC447D1F2805B04F0019ECE9 /* Main.storyboard */,
 				EC447D222805B0500019ECE9 /* Assets.xcassets */,
 				EC447D242805B0500019ECE9 /* LaunchScreen.storyboard */,

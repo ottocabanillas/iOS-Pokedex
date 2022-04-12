@@ -7,10 +7,6 @@
 
 import UIKit
 
-struct Pokemon {
-  let name: String?
-}
-
 // MARK: - DetailViewController class
 
 final class PokemonsController: UIViewController {
@@ -19,7 +15,7 @@ final class PokemonsController: UIViewController {
   @IBOutlet private weak var tableView: UITableView!
 
   // Variables
-  private var selectedName: String?
+  private var selectedPokemon: Pokemon?
   private var pokemons: [Pokemon]?
 
   // MARK: - Lifeccyle methods
@@ -28,11 +24,16 @@ final class PokemonsController: UIViewController {
     super.viewDidLoad()
 
     self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "pokemon_cell")
+    self.pokemons = getPokemons()
+  }
+
+  func getPokemons() -> [Pokemon] {
+    return [Pokemon(name: "Pikachu"), Pokemon(name: "Mew"), Pokemon(name: "MewTwo"), Pokemon(name: "Eevee"), Pokemon(name: "Lucario"), Pokemon(name: "Dugtrio"), Pokemon(name: "Magikarp")]
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "Detail", let detailController: PokemonController = segue.destination as? PokemonController {
-      detailController.pokemonName = self.selectedName
+      detailController.pokemonName = self.selectedPokemon?.name
     }
   }
 }
@@ -41,12 +42,13 @@ final class PokemonsController: UIViewController {
 extension PokemonsController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return pokemons?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "pokemon_cell", for: indexPath)
-    cell.textLabel?.text = "pokemon \(indexPath.row + 1)"
+    let pokemon: Pokemon? = self.pokemons?[indexPath.row]
+    cell.textLabel?.text = pokemon?.name
     cell.accessoryType = .disclosureIndicator
     return cell
   }
@@ -57,7 +59,7 @@ extension PokemonsController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
 
-    self.selectedName = "pokemon \(indexPath.row + 1)"
+    self.selectedPokemon = self.pokemons?[indexPath.row]
     self.performSegue(withIdentifier: "Detail", sender: nil)
   }
 }
