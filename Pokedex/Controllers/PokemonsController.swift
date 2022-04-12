@@ -24,7 +24,16 @@ final class PokemonsController: UIViewController {
 
     self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "pokemon_cell")
     let provider: PokemonProvider = PokemonProvider()
-    self.pokemons = provider.getPokemons()
+    provider.getPokemons { pokemons in
+      DispatchQueue.main.async { [weak self] in
+        guard let strongSelf = self else {
+          return
+        }
+        strongSelf.pokemons = pokemons
+        strongSelf.tableView.reloadData()
+      }
+
+    }
 
   }
 
