@@ -12,15 +12,21 @@ final class PokemonProvider {
   
   // MARK: - Methods
   func getPokemons() -> [Pokemon] {
-    return [Pokemon(name: "Pikachu"), Pokemon(name: "Mew"), Pokemon(name: "MewTwo"), Pokemon(name: "Eevee"), Pokemon(name: "Lucario"), Pokemon(name: "Dugtrio"), Pokemon(name: "Magikarp")].sorted { (pokeA, pokeB) -> Bool in
-      return pokeA.name! < pokeB.name!
+    do {
+      let decoder: JSONDecoder = JSONDecoder()
+      let pokemons: [Pokemon] = try decoder.decode([Pokemon].self, from: Helper.loadJSON(name: "pokeList"))
+      return pokemons.sorted { (pokeA, pokeB) -> Bool in
+        return pokeA.name! < pokeB.name!
+      }
+    } catch {
+      preconditionFailure(error.localizedDescription)
     }
   }
-  
 }
 
+
 // MARK: - Helper struct
-struct Helper {
+private struct Helper {
 
   // MARK: - Methods
   static func loadJSON(name: String, from bundle: Bundle = Bundle.main) -> Data {
