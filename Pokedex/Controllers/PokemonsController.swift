@@ -8,7 +8,6 @@
 import UIKit
 
 // MARK: - DetailViewController class
-
 final class PokemonsController: UIViewController {
 
   // Outlets
@@ -24,15 +23,9 @@ final class PokemonsController: UIViewController {
     super.viewDidLoad()
 
     self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "pokemon_cell")
-    self.pokemons = getPokemons()
+    let provider: PokemonProvider = PokemonProvider()
+    self.pokemons = provider.getPokemons()
 
-
-  }
-
-  func getPokemons() -> [Pokemon] {
-    return [Pokemon(name: "Pikachu"), Pokemon(name: "Mew"), Pokemon(name: "MewTwo"), Pokemon(name: "Eevee"), Pokemon(name: "Lucario"), Pokemon(name: "Dugtrio"), Pokemon(name: "Magikarp")].sorted { (pokeA, pokeB) -> Bool in
-      return pokeA.name! < pokeB.name!
-    }
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

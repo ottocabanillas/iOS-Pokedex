@@ -7,6 +7,17 @@
 
 import Foundation
 
-struct Pokemon {
+// MARK: - Pokemon struct
+struct Pokemon: Decodable {
+
+  // MARK: - Properties
   let name: String?
+  let isLegendary: Bool?
+  let image: String?
 }
+
+//{
+//    "name": "Bayleef",
+//    "isLegendary": false,
+//    "image": "bayleef.png"
+//  },

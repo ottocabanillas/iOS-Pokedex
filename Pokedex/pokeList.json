@@ -1,0 +1,122 @@
+[{
+    "name": "Bayleef",
+    "isLegendary": false,
+    "image": "bayleef.png"
+  },
+  {
+    "name": "Charizard",
+    "isLegendary": false,
+    "image": "charizard.png"
+  },
+  {
+    "name": "Beautifly",
+    "isLegendary": false,
+    "image": "beautifly.png"
+  },
+  {
+    "name": "Dewgong",
+    "isLegendary": false,
+    "image": "dewgong.png"
+  },
+  {
+    "name": "Espeon",
+    "isLegendary": false,
+    "image": "espeon.png"
+  },
+  {
+    "name": "Furret",
+    "isLegendary": false,
+    "image": "furret.png"
+  },
+  {
+    "name": "Houndoom",
+    "isLegendary": false,
+    "image": "houndoom.png"
+  },
+  {
+    "name": "Ivysour",
+    "isLegendary": false,
+    "image": "ivysour.png"
+  },
+  {
+    "name": "Lapras",
+    "isLegendary": false,
+    "image": "lapras.png"
+  },
+  {
+    "name": "Lugia",
+    "isLegendary": true,
+    "image": "lugia.png"
+  },
+  {
+    "name": "Marowak",
+    "isLegendary": false,
+    "image": "marowak.png"
+  },
+  {
+    "name": "Mewtwo",
+    "isLegendary": true,
+    "image": "mewtwo.png"
+  },
+  {
+    "name": "Mightyena",
+    "isLegendary": false,
+    "image": "mightyena.png"
+  },
+  {
+    "name": "Nidorina",
+    "isLegendary": false,
+    "image": "nidorina.png"
+  },
+  {
+    "name": "Ninetales",
+    "isLegendary": false,
+    "image": "ninetales.png"
+  },
+  {
+    "name": "Pidgeotto",
+    "isLegendary": false,
+    "image": "pidgeotto.png"
+  },
+  {
+    "name": "Suicune",
+    "isLegendary": true,
+    "image": "suicune.png"
+  },
+  {
+    "name": "Articuno",
+    "isLegendary": true,
+    "image": "articuno.png"
+  },
+  {
+    "name": "Bonsly",
+    "isLegendary": false,
+    "image": "bonsly.png"
+  },
+  {
+    "name": "Lucario",
+    "isLegendary": false,
+    "image": "lucario.png"
+  },
+  {
+    "name": "Leafeon",
+    "isLegendary": false,
+    "image": "leafeon.png"
+  },
+  {
+    "name": "Munchlax",
+    "isLegendary": false,
+    "image": "munchlax.png"
+  },
+  {
+    "name": "Snivy",
+    "isLegendary": false,
+    "image": "snivy.png"
+  },
+  {
+    "name": "Togetic",
+    "isLegendary": false,
+    "image": "togetic.png"
+  }
+]
+
