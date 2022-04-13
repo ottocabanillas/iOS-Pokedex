@@ -41,20 +41,3 @@ final class PokemonProvider {
   }
 }
 
-
-// MARK: - Helper struct
-private struct Helper {
-
-  // MARK: - Methods
-  static func loadJSON(name: String, from bundle: Bundle = Bundle.main) -> Data {
-    guard let url = bundle.url(forResource: name, withExtension: "json") else {
-      fatalError("Could not load file named: \(name)")
-    }
-
-    guard let data = try? Data(contentsOf: url) else {
-      fatalError("Could not read data from file")
-    }
-
-    return data
-  }
-}
