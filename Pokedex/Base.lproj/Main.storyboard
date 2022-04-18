@@ -53,28 +53,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-eB-MaW">
-                                <rect key="frame" x="167" y="427.5" width="80" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-eB-MaW">
+                                <rect key="frame" x="50" y="124" width="314" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OXn-No-IBl">
+                                <rect key="frame" x="20" y="254" width="374" height="513"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4EG-oL-FW7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N7d-eB-MaW" firstAttribute="centerX" secondItem="beM-Nj-df8" secondAttribute="centerX" id="OhW-gC-hQg"/>
-                            <constraint firstItem="N7d-eB-MaW" firstAttribute="centerY" secondItem="beM-Nj-df8" secondAttribute="centerY" id="xmV-qn-MTf"/>
+                            <constraint firstItem="N7d-eB-MaW" firstAttribute="leading" secondItem="4EG-oL-FW7" secondAttribute="leading" constant="50" id="drl-lI-DJY"/>
+                            <constraint firstItem="4EG-oL-FW7" firstAttribute="bottom" secondItem="OXn-No-IBl" secondAttribute="bottom" constant="95" id="eKQ-wP-8Xp"/>
+                            <constraint firstItem="N7d-eB-MaW" firstAttribute="top" secondItem="4EG-oL-FW7" secondAttribute="top" constant="80" id="f1z-ZP-IxP"/>
+                            <constraint firstItem="4EG-oL-FW7" firstAttribute="trailing" secondItem="OXn-No-IBl" secondAttribute="trailing" constant="20" id="k8k-bI-R4u"/>
+                            <constraint firstItem="4EG-oL-FW7" firstAttribute="trailing" secondItem="N7d-eB-MaW" secondAttribute="trailing" constant="50" id="qNP-y5-iHe"/>
+                            <constraint firstItem="OXn-No-IBl" firstAttribute="top" secondItem="N7d-eB-MaW" secondAttribute="bottom" priority="999" constant="89" id="tCT-0U-eWR"/>
+                            <constraint firstItem="OXn-No-IBl" firstAttribute="leading" secondItem="4EG-oL-FW7" secondAttribute="leading" constant="20" id="z27-Mu-cVU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g9R-lN-ugm"/>
                     <connections>
                         <outlet property="nameLabel" destination="N7d-eB-MaW" id="Jxv-4b-8ON"/>
+                        <outlet property="pokemonImage" destination="OXn-No-IBl" id="0tx-Re-47s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpY-jP-bmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="-64"/>
+            <point key="canvasLocation" x="905.79710144927549" y="-64.285714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lSy-5n-VoC">
