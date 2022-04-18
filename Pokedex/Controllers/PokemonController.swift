@@ -20,44 +20,24 @@ final class PokemonController: UIViewController {
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
-    super.viewDidLoad()
 
+    super.viewDidLoad()
     setupViewPoke()
 //    self.title = pokemonName
 //    self.nameLabel.text = pokemonName
   }
 
   private func setupViewPoke() {
-    guard let pokeInfo = pokeComplete else {
-      preconditionFailure("Error")
+
+    guard let pokeInfo = self.pokeComplete else {
+      preconditionFailure("A pokemon has to be setted")
     }
     self.title = pokeInfo.name
     self.nameLabel.text = pokeInfo.name
 //    let pokeImg = pokeComplete?.image
 // Preguntar a nata
-    if (pokeInfo.isLegendary!){
-      changeColor(poke: pokeInfo.name!)
-    }
+    self.view.backgroundColor = pokeInfo.isLegendary! ? .systemPurple : .lightGray
     pokemonImage.image = UIImage(named: pokeInfo.image!)
-  }
-
-  private func changeColor(poke: String) {
-    switch poke {
-    case "Lugia":
-      self.view.backgroundColor = .lightGray
-      self.nameLabel.textColor = .white
-      break
-    case "Articuno":
-      self.view.backgroundColor = .cyan
-      self.nameLabel.textColor = .white
-      break
-    case "Mewtwo":
-      self.view.backgroundColor = .purple
-      self.nameLabel.textColor = .white
-      break
-    default:
-      self.view.backgroundColor = .white
-    }
   }
 
 }

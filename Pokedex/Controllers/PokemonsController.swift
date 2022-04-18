@@ -20,6 +20,7 @@ final class PokemonsController: UIViewController {
   // MARK: - Lifeccyle methods
 
   override func viewDidLoad() {
+
     super.viewDidLoad()
 
     setupNavigationBar()
@@ -28,6 +29,7 @@ final class PokemonsController: UIViewController {
     provider.getPokemons { pokemons in
       DispatchQueue.main.async { [weak self] in
         guard let strongSelf = self else {
+
           return
         }
         strongSelf.pokemons = pokemons
@@ -46,6 +48,7 @@ final class PokemonsController: UIViewController {
   //  }
 
   private func setupNavigationBar() {
+
     navigationController?.navigationBar.barTintColor = .red
     navigationController?.navigationBar.tintColor = .white
     let pokemonLogo = UIImage(named: "pokemonLogo")
@@ -60,10 +63,12 @@ final class PokemonsController: UIViewController {
 extension PokemonsController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
     return pokemons?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
     let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "pokemon_cell", for: indexPath)
     let pokemon: Pokemon? = self.pokemons?[indexPath.row]
     cell.textLabel?.text = pokemon?.name
@@ -74,7 +79,9 @@ extension PokemonsController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate methods
 extension PokemonsController: UITableViewDelegate {
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
     tableView.deselectRow(at: indexPath, animated: true)
 
     //    self.selectedPokemon = self.pokemons?[indexPath.row]

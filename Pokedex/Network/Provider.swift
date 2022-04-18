@@ -14,6 +14,7 @@ final class PokemonProvider {
   func getPokemons(_ completion: @escaping ([Pokemon]) -> Void) {
 
     guard let url: URL = URL(string: "https://gist.githubusercontent.com/OttoCab/94a4d63b8937b5bcface0a0ff3ba12aa/raw/7d193edbe5ae9a90048de2f5990cb30200dd6e87/pokeList") else {
+      
       preconditionFailure("Invalid URL string")
     }
 
@@ -27,12 +28,14 @@ final class PokemonProvider {
       }
 
       do {
+
         let decoder: JSONDecoder = JSONDecoder()
         let pokemons: [Pokemon] = try decoder.decode([Pokemon].self, from: data)
         return completion(pokemons.sorted { (pokeA, pokeB) -> Bool in
           return pokeA.name! < pokeB.name!
         })
       } catch {
+
         preconditionFailure(error.localizedDescription)
       }
     }
