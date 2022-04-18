@@ -28,14 +28,17 @@ final class PokemonController: UIViewController {
   }
 
   private func setupViewPoke() {
-    self.title = pokeComplete?.name
-    self.nameLabel.text = pokeComplete?.name
-    let pokeImg = pokeComplete?.image
-// Preguntar a nata
-    if (pokeComplete!.isLegendary!){
-      changeColor(poke: pokeComplete!.name!)
+    guard let pokeInfo = pokeComplete else {
+      preconditionFailure("Error")
     }
-    pokemonImage.image = UIImage(named: pokeImg!)
+    self.title = pokeInfo.name
+    self.nameLabel.text = pokeInfo.name
+//    let pokeImg = pokeComplete?.image
+// Preguntar a nata
+    if (pokeInfo.isLegendary!){
+      changeColor(poke: pokeInfo.name!)
+    }
+    pokemonImage.image = UIImage(named: pokeInfo.image!)
   }
 
   private func changeColor(poke: String) {
