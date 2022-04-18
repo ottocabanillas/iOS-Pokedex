@@ -37,6 +37,8 @@ final class PokemonController: UIViewController {
 //    let pokeImg = pokeComplete?.image
 // Preguntar a nata
     self.view.backgroundColor = pokeInfo.isLegendary! ? .systemPurple : .lightGray
+    pokemonImage.translatesAutoresizingMaskIntoConstraints = false
+    pokemonImage.contentMode = .scaleAspectFit
     pokemonImage.image = UIImage(named: pokeInfo.image!)
   }
 

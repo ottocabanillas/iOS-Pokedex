@@ -66,13 +66,13 @@
                         <viewLayoutGuide key="safeArea" id="4EG-oL-FW7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4EG-oL-FW7" firstAttribute="trailing" secondItem="OXn-No-IBl" secondAttribute="trailing" constant="20" id="99P-sl-Rye"/>
+                            <constraint firstItem="4EG-oL-FW7" firstAttribute="bottom" secondItem="OXn-No-IBl" secondAttribute="bottom" constant="95" id="Bar-nC-Sja"/>
+                            <constraint firstItem="OXn-No-IBl" firstAttribute="top" secondItem="N7d-eB-MaW" secondAttribute="bottom" priority="750" constant="89" id="ODL-Vh-Mhm"/>
+                            <constraint firstItem="OXn-No-IBl" firstAttribute="leading" secondItem="4EG-oL-FW7" secondAttribute="leading" constant="20" id="dXv-Vs-sec"/>
                             <constraint firstItem="N7d-eB-MaW" firstAttribute="leading" secondItem="4EG-oL-FW7" secondAttribute="leading" constant="50" id="drl-lI-DJY"/>
-                            <constraint firstItem="4EG-oL-FW7" firstAttribute="bottom" secondItem="OXn-No-IBl" secondAttribute="bottom" constant="95" id="eKQ-wP-8Xp"/>
                             <constraint firstItem="N7d-eB-MaW" firstAttribute="top" secondItem="4EG-oL-FW7" secondAttribute="top" constant="80" id="f1z-ZP-IxP"/>
-                            <constraint firstItem="4EG-oL-FW7" firstAttribute="trailing" secondItem="OXn-No-IBl" secondAttribute="trailing" constant="20" id="k8k-bI-R4u"/>
                             <constraint firstItem="4EG-oL-FW7" firstAttribute="trailing" secondItem="N7d-eB-MaW" secondAttribute="trailing" constant="50" id="qNP-y5-iHe"/>
-                            <constraint firstItem="OXn-No-IBl" firstAttribute="top" secondItem="N7d-eB-MaW" secondAttribute="bottom" priority="999" constant="89" id="tCT-0U-eWR"/>
-                            <constraint firstItem="OXn-No-IBl" firstAttribute="leading" secondItem="4EG-oL-FW7" secondAttribute="leading" constant="20" id="z27-Mu-cVU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g9R-lN-ugm"/>
