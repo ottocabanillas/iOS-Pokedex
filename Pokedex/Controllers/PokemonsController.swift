@@ -37,11 +37,11 @@ final class PokemonsController: UIViewController {
 
   }
 
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "Detail", let detailController: PokemonController = segue.destination as? PokemonController {
-      detailController.pokemonName = self.selectedPokemon?.name
-    }
-  }
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.identifier == "Detail", let detailController: PokemonController = segue.destination as? PokemonController {
+//      detailController.pokemonName = self.selectedPokemon?.name
+//    }
+//  }
 }
 
 // MARK: - PlaceHolderUITableViewDataSource methods
@@ -65,8 +65,16 @@ extension PokemonsController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
 
-    self.selectedPokemon = self.pokemons?[indexPath.row]
-    self.performSegue(withIdentifier: "Detail", sender: nil)
+//    self.selectedPokemon = self.pokemons?[indexPath.row]
+//    self.performSegue(withIdentifier: "Detail", sender: nil)
+
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    guard let detailController: PokemonController = storyBoard.instantiateViewController(identifier: "PokemonController") as? PokemonController else {
+      preconditionFailure("There was an issue getting PokemonController from Main storyboard")
+    }
+
+    detailController.pokemonName = self.pokemons?[indexPath.row].name
+    self.navigationController?.pushViewController(detailController, animated: true)
   }
 }
 

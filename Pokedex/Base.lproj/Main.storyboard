@@ -39,7 +39,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tn4-VG-wYL" id="ivL-X6-ZYO"/>
-                        <segue destination="rhX-8k-PAz" kind="show" identifier="Detail" id="ORf-KS-Xdo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDJ-aA-RNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,7 +48,7 @@
         <!--Pokemon Controller-->
         <scene sceneID="5el-r0-xIk">
             <objects>
-                <viewController id="rhX-8k-PAz" customClass="PokemonController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PokemonController" id="rhX-8k-PAz" customClass="PokemonController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="beM-Nj-df8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
